@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Formatting</title>
+  <h>Formatting Text</h>
+</head>
+<body>
+  <p>Lorem ipsum, <b>dolor</b> <strong>dolor</strong> amet consectetur adipisicing elit. <i>dicta</i>,  consequuntur labore <u>distinctio</u> facere a quisquam praesentium eum, obcaecati nulla doloremque aliquam cumque nihil! Amet nihil corrupti necessitatibus <ins>odio</ins> ducimus! H<sub>2</sub>O. x<sup>2</sup>+ y<sup>2</sup> = x<sup>2</sup>+2xy+y<sup>2</sup>
+  <del>100</del> <ins>80</ins></p>
+  <p>log<sub>10</sub>(10) = 1</p>
+  <p>(a+b)<sup>2</sup>=a<sup>2</sup>+2ab+b<sup>2</sup></p>
+  
+  <blockquote>
+    Sajid and Sifat are my sons. Sajid is a student of class 10 and Sifat is student of class 5.</blockquote>
+<!--HTML শিখতে খুব মজা লাগছে।-->
+    <q>HTML is fun.</q>
+  <p><abbr title="Hyper Text Markup Language">HTML</abbr> is not a Programming Language.</p>
+  <address>Goyhatta Kamalpur, Ullapara, Sirajgonj.</address>
+
+  <p>My name is <cite>Md. Rasheduzzaman</cite>. I am a <mark>teacher</mark> in a primary school.</p>
+
+  <bdo dir="rtl">HTML</bdo>
+</body>
+</html>

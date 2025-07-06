@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Text Formatting ও List উদাহরণ</title>
+</head>
+<body>
+
+  <h1>Text Formatting</h1>
+  <p>আমি <b>একজন প্রাথমিক বিদ্যালয়ের শিক্ষক</b>। আমি <i>শিক্ষা</i> ও <u>প্রযুক্তি</u> ভালোবাসি।</p>
+  <p>এই লেখাটি <mark>গুরুত্বপূর্ণ</mark>।</p>
+  <p>মূল্য: <del>৳১০০</del>, নতুন মূল্য: <ins>৳৮০</ins></p>
+  <p>সূত্র: H<sub>2</sub>O, x<sup>2</sup> + y<sup>2</sup></p>
+
+  <h1>Lists</h1>
+  <h3>পঠিত বিষয়:</h3>
+  <ol>
+    <li>বাংলা</li> 
+    <li>ইংরেজি</li>
+    <li>গণিত</li>
+  </ol>
+
+  <h3>প্রয়োজনীয় সামগ্রী:</h3>
+  <ul>
+    <li>বই</li>
+    <li>খাতা</li>
+    <li>কলম</li>
+  </ul>
+
+  <h3>শিক্ষা সংজ্ঞা:</h3>
+  <dl>
+    <dt>শিক্ষক</dt>
+    <dd>যিনি শিক্ষাদান করেন</dd>
+    <dt>ছাত্র</dt>
+    <dd>যিনি শিখেন</dd>
+  </dl>
+<dl>
+  <dt>HTML</dt>
+  <dd>ওয়েবপেজ তৈরির ভাষা</dd>
+
+  <dt>CSS</dt>
+  <dd>ওয়েবপেজের ডিজাইন ও সাজানোর ভাষা</dd>
+
+  <dt>Python</dt>
+  <dd>সহজ ও শক্তিশালী প্রোগ্রামিং ভাষা</dd>
+</dl>
+
+</body>
+</html>
