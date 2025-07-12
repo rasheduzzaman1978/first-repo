@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Form থেকে Table এ Data যোগ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4faff;
+    }
+
+    h2 {
+      color: #004080;
+    }
+
+    input, select {
+      padding: 5px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      width: 250px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      width: 120px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    table {
+      width: 70%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #007acc;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #d9f0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📋 শিক্ষার্থী তথ্য ফর্ম</h2>
+  <form id="studentForm" onsubmit="addToTable(); return false;">
+    <label>👤 নাম:</label><br>
+    <input type="text" id="name" required><br>
+
+    <label>🔢 রোল:</label><br>
+    <input type="number" id="roll" required><br>
+
+    <label>📊 মার্কস:</label><br>
+    <input type="number" id="marks" required><br><br>
+
+    <input type="submit" value="যুক্ত করুন">
+    <input type="reset" value="রিসেট করুন">
+  </form>
+
+  <h2>📘 শিক্ষার্থীদের ফলাফল</h2>
+  <table id="studentTable">
+    <tr>
+      <th>নাম</th>
+      <th>রোল</th>
+      <th>মার্কস</th>
+    </tr>
+    <!-- নতুন ডেটা এখানে যুক্ত হবে -->
+  </table>
+
+  <script>
+    function addToTable() {
+      // ইনপুটগুলো পড়া
+      let name = document.getElementById("name").value;
+      let roll = document.getElementById("roll").value;
+      let marks = document.getElementById("marks").value;
+
+      // নতুন সারি তৈরি
+      let table = document.getElementById("studentTable");
+      let newRow = table.insertRow(-1);
+
+      let cell1 = newRow.insertCell(0);
+      let cell2 = newRow.insertCell(1);
+      let cell3 = newRow.insertCell(2);
+
+      cell1.innerHTML = name;
+      cell2.innerHTML = roll;
+      cell3.innerHTML = marks;
+
+      // ফর্ম রিসেট
+      document.getElementById("studentForm").reset();
+    }
+  </script>
+
+</body>
+</html>

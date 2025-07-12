@@ -1,28 +1,82 @@
 <!DOCTYPE html>
 <html>
-  
-    <head>
-      <title>Using CSS in HTML</title>
-      <style>
-        p{
-          font-size: 20px;color:blue; text-align:justify;
-        }
-      </style>
-      <link rel="stylesheet" href="style.css">
-      <!--<script>
-        alert('Are you interested in programming?');-->
-    <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
-    <br><a href="index.html" target="_blank">Index.HTML</a>
-    <br><a href="mailto:rashedzaman1978@gmail.com" target="_blank">E-mail:rashedzaman1978@gmail.com</a>
-      </head>
-    <body>
+<head>
+  <meta charset="UTF-8">
+  <title>Using CSS in HTML</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .left-box {
+      margin-right: 20px;
+      text-align: center;
+    }
+
+    .left-box img {
+      width: 120px;
+      border-radius: 50%;
+      border: 2pt dotted rgb(179, 8, 31);
+    }
+
+    .left-box p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .right-box p {
+      font-size: 20px;
+      color: blue;
+      text-align: justify;
+    }
+
+    h1 {
+      color: darkred;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- বাম পাশে ছবি + ইমেইল -->
+    <div class="left-box">
+      <img src="Rashed.png" alt="রাশেদের ছবি">
+      <p>
+        <a href="mailto:rashedzaman1978@gmail.com">📧 rashedzaman1978@gmail.com</a>
+        <address>Md. Rasheduzzaman<br> Asistant teacher, Goyhatta GPS<br>Ullapara, Sirajgonj.
+        </address>
+      </p>
+    </div>
+
+    <!-- ডান পাশে বাকী কনটেন্ট -->
+    <div class="right-box">
       <h1><u>HTML এ CSS এর ব্যবহার</u></h1>
-      <p style="color:brown">আলহামদুলিল্লাহ, HTML শেখা শুরু করেছি। ৫ জুলাই, ২০২৫ শনিবার বেলা ০২ঃ০০ টার পর থেকে শুরু। খুব ভালো লাগছে। আমি নিয়মিত প্রতিদিন ৪-৫ ঘন্টা সময় দেব বলে নিয়ত করেছি, ইনশাআল্লাহ। বাকি আল্লাহর ইচ্ছা।</p>
 
-      <p>আজ ৬ জুলাই, ২০২৫। HTML এ CSS এর ব্যবহার শিখছি। CSS তিনভাবে ব্যবহার করা যায়। যেমনঃ Inline CSS, External CSS এবং Internal CSS আমরা সবসময় External CSS ব্যবহার করার চেষ্টা করব। তা না হলে Internal CSS এবং সবশেষে Inline CSS ব্যবহার করব। Internal CSS লিখতে হয় <head> </head> ট্যাগের মধ্যে।</p>
+      <p style="color:brown">
+        আলহামদুলিল্লাহ, HTML শেখা শুরু করেছি। ৫ জুলাই, ২০২৫ শনিবার বেলা ০২ঃ০০ টার পর থেকে শুরু। খুব ভালো লাগছে। আমি নিয়মিত প্রতিদিন ৪-৫ ঘন্টা সময় দেব বলে নিয়ত করেছি, ইনশাআল্লাহ। বাকি আল্লাহর ইচ্ছা।
+      </p>
 
-      <q>আমার শখ ভালোভাবে HTML, CSS, JavaScript and Python শিখব এবং এর ব্যবহার কাজে লাগিয়ে অর্থনৈতিকভাবে স্বাবলম্বী হব, ইনশাআল্লাহ।</q>
-      
-    </body>
-  
+      <p>
+        আজ ৬ জুলাই, ২০২৫। HTML এ CSS এর ব্যবহার শিখছি। CSS তিনভাবে ব্যবহার করা যায়। যেমনঃ Inline CSS, External CSS এবং Internal CSS। আমরা সবসময় External CSS ব্যবহার করার চেষ্টা করব। তা না হলে Internal CSS এবং সবশেষে Inline CSS ব্যবহার করব। Internal CSS লিখতে হয় &lt;head&gt; এর মধ্যে।
+      </p>
+
+      <q>আমার শখ ভালোভাবে HTML, CSS, JavaScript, React JS, Tailwind CSS, Next JS এবং Python শিখব এবং এর ব্যবহার কাজে লাগিয়ে অর্থনৈতিকভাবে স্বাবলম্বী হব, ইনশাআল্লাহ।</q>
+
+      <p><u>আমার প্রয়োজনীয় Websites:</u></>
+        <p><a href="https://www.w3schools.com" target="_blank">HTML শেখার জন্য W3Schools</a></p>
+  <p><a href="https://chat.openai.com" target="_blank">বিভিন্ন তথ্য জানার জন্য ChatGPT</a></p>
+  <p><a href="https://gemini.google.com" target="_blank">বিভিন্ন তথ্য জানার জন্য Gemini</a></p>
+  <p><a href="https://colab.research.google.com/" target="_blank">Python শেখার জন্য Google Colab</a></p>
+  <p><a href="https://www.youtube.com" target="_blank">ভিডিও টিউটোরিয়ালের জন্য YouTube</a></p>
+    </div>
+  </div>
+
+</body>
 </html>

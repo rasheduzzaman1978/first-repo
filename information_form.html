@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+<title>studentForm</title>
+  </head>
+  <body>
+    <h2>📋 শিক্ষার্থী তথ্য ফর্ম</h2>
+
+<form>
+  <!-- নাম (Text Input) -->
+  নাম: <input type="text" name="name" placeholder="নাম লিখুন"><br><br>
+
+  <!-- ইমেইল -->
+  ইমেইল: <input type="email" name="email" placeholder="example@gmail.com"><br><br>
+
+  <!-- বয়স -->
+  বয়স: <input type="number" name="age" min="5" max="100"><br><br>
+
+  <!-- পাসওয়ার্ড -->
+  পাসওয়ার্ড: <input type="password" name="password"><br><br>
+
+  <!-- লিঙ্গ (Radio) -->
+  লিঙ্গ:
+  <input type="radio" name="gender" value="Male"> পুরুষ
+  <input type="radio" name="gender" value="Female"> নারী <br><br>
+
+  <!-- আগ্রহ (Checkbox) -->
+  আগ্রহ:
+  <input type="checkbox" name="interest" value="HTML"> HTML
+  <input type="checkbox" name="interest" value="CSS"> CSS
+  <input type="checkbox" name="interest" value="Python"> Python <br><br>
+
+  <!-- মতামত (Textarea) -->
+  মতামত:<br>
+  <textarea rows="4" cols="40" placeholder="আপনার মতামত লিখুন..."></textarea><br><br>
+
+  <!-- শ্রেণি (Select box) -->
+  শ্রেণি:
+  <select name="class">
+    <option value="">নির্বাচন করুন</option>
+    <option>তৃতীয়</option>
+    <option>চতুর্থ</option>
+    <option>পঞ্চম</option>
+  </select><br><br>
+
+  <!-- বাটন -->
+  <button type="submit">সাবমিট</button>
+  <button type="reset">রিসেট</button>
+</form>
+
+  </body>
+  </html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="/css/form.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    form {
+      margin-top: 20px;
+    }
+    label {
+      display: inline-block;
+      width: 150px;
+      margin-bottom: 10px;
+    }
+    input, select, textarea {
+      margin-bottom: 15px;
+      padding: 5px;
+    }
+    .radio-group, .checkbox-group {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">Technology Preferences</h2>
+  <form action="" class="tech-form">
+    <div class="radio-group">
+      <input type="radio" name="tech" id="html" value="html">
+      <label for="html">HTML</label>
+      
+      <input type="radio" name="tech" id="python" value="python">
+      <label for="python">Python</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" name="tech" id="css" value="css">
+      <label for="css">CSS</label>
+    </div>
+  </form>
+
+  <h2 style="text-align: center;">Sign up Form</h2>
+  <hr>
+  
+  <form action="#" method="post">
+    <div>
+      <label for="user">Name: </label>
+      <input type="text" name="user" id="user" placeholder="User name" required>
+    </div>
+    
+    <div>
+      <label for="email">E-mail: </label>
+      <input type="email" name="usermail" id="email" placeholder="User Mail" required>
+    </div>
+    
+    <div>
+      <label for="password">Password: </label>
+      <input type="password" name="password" id="password" placeholder="Password" required>
+    </div>
+    
+    <div>
+      <label for="phone">Phone Number: </label>
+      <select name="code" id="country-code">
+        <option value="+880">+880</option>
+        <option value="+990">+990</option>
+        <option value="+110">+110</option>
+      </select>
+      <input type="tel" name="phone" id="phone" placeholder="123456789" required>
+    </div>
+    
+    <div>
+      <label for="country">Country: </label>
+      <input list="countries" name="country" id="country">
+      <datalist id="countries">
+        <option value="Bangladesh">
+        <option value="Pakistan">
+        <option value="Malaysia">
+        <option value="America">
+      </datalist>
+    </div>
+    
+    <div class="radio-group">
+      <label>Gender: </label>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="male">Male</label>
+      
+      <input type="radio" name="gender" id="female" value="female">
+      <label for="female">Female</label>
+    </div>
+    
+    <div>
+      <label for="dob">Date of Birth: </label>
+      <input type="date" name="dob" id="dob" required>  
+    </div>
+    
+    <div>
+      <label for="time">Time: </label>
+      <input type="time" name="time" id="time">
+    </div>
+    
+    <div>
+      <label for="color">Favorite Color: </label>
+      <input type="color" name="color" id="color">
+    </div>
+    
+    <div>
+      <label for="photo">Choose your photo: </label>
+      <input type="file" name="photo" id="photo" accept="image/*">
+    </div>
+    
+    <div class="checkbox-group">
+      <label>Vehicles: </label>
+      <input type="checkbox" name="vehicles" id="bike" value="bike">
+      <label for="bike">I have a bike</label>
+      
+      <input type="checkbox" name="vehicles" id="car" value="car">
+      <label for="car">I have a car</label>
+    </div>
+    
+    <div>
+      <label for="comments">Comments: </label>
+      <textarea name="comments" id="comments" rows="4" cols="40"></textarea>
+    </div>
+    
+    <div style="text-align: center; margin-top: 20px;">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset" style="margin-left: 10px;">
+    </div>
+  </form>
+</body>
+</html>
