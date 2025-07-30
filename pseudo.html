@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-class Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    h1:hover {
+      color: red;
+      background-color: yellow;
+      cursor: pointer;
+    }
+
+    a:link {
+      color: blue;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: green;
+    }
+
+    input:focus {
+      background-color: lightyellow;
+      border: 2px solid orange;
+    }
+
+    ul li:first-child {
+      color: green;
+      font-weight: bold;
+    }
+
+    ul li:last-child {
+      color: red;
+      font-style: italic;
+    }
+
+    ul li:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+
+    button:hover {
+      background-color: green;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧪 Pseudo-Class Practice</h1>
+
+  <p><a href="https://www.example.com" target="_blank">Visit Example</a></p>
+
+  <p>Type something below (focus effect):</p>
+  <input type="text" placeholder="Your Name"><br><br>
+
+  <ul>
+    <li>Item One</li>
+    <li>Item Two</li>
+    <li>Item Three</li>
+    <li>Item Four</li>
+  </ul>
+
+  <br>
+
+  <button>Click Me</button>
+
+</body>
+</html>

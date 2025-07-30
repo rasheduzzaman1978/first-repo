@@ -1,6 +1,171 @@
-q{
-  font-size: 25ps; color: red; text-align: justify;
+/* বেসিক রিসেট */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-h1{
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* গ্রিড কন্টেইনার স্টাইল */
+.grid-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  min-height: 100vh;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* হেডার স্টাইল */
+.header {
+  grid-area: header;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.header nav ul li {
+  margin-left: 20px;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* সাইডবার স্টাইল */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #4a6278;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #1abc9c;
+}
+
+.advertisement {
+  background-color: #4a6278;
+  padding: 15px;
+  border-radius: 5px;
   text-align: center;
+}
+
+/* মেইন কন্টেন্ট স্টাইল */
+.main-content {
+  grid-area: main;
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
+.blog-post {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.blog-post h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  color: #7f8c8d;
+}
+
+/* ফুটার স্টাইল */
+.footer {
+  grid-area: footer;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.social-links a:hover {
+  color: #1abc9c;
+}
+
+/* রেসপন্সিভ ডিজাইন */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+  }
+  
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header nav ul {
+    margin-top: 15px;
+    justify-content: center;
+  }
+  
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .social-links {
+    margin-top: 15px;
+  }
 }

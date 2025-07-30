@@ -1,40 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>রাশেদের পেজ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>গ্রিড লেআউট ব্লগ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <h1>মোঃ রাশেদুজ্জামান</h1>
-  <h2>আমি প্রাথমিক বিদ্যালয়ের একজন শিক্ষক</h2>
-  <hr>
-
-  <h2>আমার ছবি</h2>
-  <img src="<a href="https://imgbb.com/"><img src="https://i.ibb.co/GQ2JCYtk/Rashed.jpg" alt="Rashed" border="10";></a>
-
-  <h2>আমি যে বিষয়গুলো পড়াই:</h2>
-  <ol>
-    <li>ইংরেজি</li>
-    <li>গণিত</li>
-    <li>বিজ্ঞান</li>
-  </ol>
-
-  <h2>আমার প্রয়োজনীয় জিনিসপত্র:</h2>
-  <ul>
-    <li>বই</li>
-    <li>কলম</li>
-    <li>বোর্ড, মার্কার</li>
-  </ul>
-
-  <h2>প্রিয় ওয়েবসাইট</h2>
-  <p><a href="https://www.w3schools.com" target="_blank">HTML শেখার জন্য W3Schools</a></p>
-  <p><a href="https://chat.openai.com" target="_blank">বিভিন্ন তথ্য জানার জন্য ChatGPT</a></p>
-  <p><a href="https://gemini.google.com" target="_blank">বিভিন্ন তথ্য জানার জন্য Gemini</a></p>
-  <p><a href="https://colab.research.google.com/" target="_blank">Python শেখার জন্য Google Colab</a></p>
-  <p><a href="https://www.youtube.com" target="_blank">ভিডিও টিউটোরিয়ালের জন্য YouTube</a></p>
-
-  
+  <div class="grid-container">
+    <header class="header">
+      <h1>আমার ব্লগ</h1>
+      <nav>
+        <ul>
+          <li><a href="#">হোম</a></li>
+          <li><a href="#">ব্লগ</a></li>
+          <li><a href="#">পরিচিতি</a></li>
+          <li><a href="contact.html" target="_blank">যোগাযোগ</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <aside class="sidebar">
+      <h3>বিষয়বস্তু</h3>
+      <ul>
+        <li><a href="#">ওয়েব ডেভেলপমেন্ট</a></li>
+        <li><a href="#">গ্রাফিক ডিজাইন</a></li>
+        <li><a href="#">প্রোগ্রামিং</a></li>
+        <li><a href="#">ডাটাবেস</a></li>
+      </ul>
+      
+      <div class="advertisement">
+        <p>এখানে বিজ্ঞাপন থাকবে</p>
+      </div>
+    </aside>
+    
+    <main class="main-content">
+      <article class="blog-post">
+        <h2>CSS Grid শেখা</h2>
+        <p>CSS Grid হল ওয়েব লেআউট তৈরি করার একটি শক্তিশালী সিস্টেম...</p>
+      </article>
+      
+      <article class="blog-post">
+        <h2>Flexbox বনাম Grid</h2>
+        <p>Flexbox এবং Grid উভয়ই লেআউট তৈরি করতে ব্যবহৃত হয় কিন্তু তাদের ব্যবহার ভিন্ন...</p>
+      </article>
+    </main>
+    
+    <footer class="footer">
+      <p>&copy; ২০২৩ আমার ব্লগ। সকল অধিকার সংরক্ষিত।</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank">ফেসবুক</a>
+        <a href="https://x.com/" target="_blank">টুইটার</a>
+        <a href="https://www.instagram.com/" target="_blank">ইনস্টাগ্রাম</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
-

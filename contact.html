@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card with Pseudo-elements</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #00bcd4, #2196f3);
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    .card::after {
+      content: 'NEW';
+      position: absolute;
+      top: 10px;
+      left: -20px;
+      background: crimson;
+      color: white;
+      font-size: 14px;
+      padding: 4px 12px;
+      transform: rotate(-50deg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #333;
+      z-index: 2;
+      position: relative;
+    }
+
+    .card p {
+      color: #555;
+      z-index: 2;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Web Design Course</h2>
+    <p>Learn HTML, CSS, and JavaScript from scratch with hands-on projects.</p>
+  </div>
+
+</body>
+</html>
