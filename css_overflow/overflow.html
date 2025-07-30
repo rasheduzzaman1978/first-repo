@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Overflow উদাহরণ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #a7f7f7;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .box {
+      width: 250px;
+      height: 120px;
+      padding: 10px;
+      border: 2px solid #333;
+      background-color: #fff;
+      overflow: visible; /* default */
+    }
+
+    .visible   { overflow: visible; background-color: #e3f2fd; }
+    .hidden    { overflow: hidden; background-color: #ffebee; }
+    .scroll    { overflow: scroll; background-color: #e8f5e9; }
+    .auto      { overflow: auto; background-color: #f3e5f5; }
+
+    .box-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .content {
+      height: 200px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Overflow উদাহরণ</h2>
+
+  <div class="container">
+    <div class="box visible">
+      <div class="box-title">overflow: visible (default)</div>
+      <div class="content">
+        এই টেক্সটটি অনেক লম্বা এবং বক্সের বাইরে চলে যাচ্ছে, কিন্তু এটি কাটা হবে না। বাইরে বের হয়ে গেলেও দেখা যাবে।
+      </div>
+    </div>
+
+    <div class="box hidden">
+      <div class="box-title">overflow: hidden</div>
+      <div class="content">
+        এই টেক্সটটি অনেক লম্বা এবং বক্সের বাইরে চলে যাচ্ছে, কিন্তু এখানে অতিরিক্ত অংশ কেটে যাবে ও দেখা যাবে না।
+      </div>
+    </div>
+
+    <div class="box scroll">
+      <div class="box-title">overflow: scroll</div>
+      <div class="content">
+        এখানে scrollbar সবসময় থাকবে। যদি কনটেন্ট কমও হয়, scrollbar তবুও থাকবে।
+      </div>
+    </div>
+
+    <div class="box auto">
+      <div class="box-title">overflow: auto</div>
+      <div class="content">
+        এখানে scrollbar তখনই আসবে যখন কনটেন্ট বক্সের height এর বাইরে চলে যাবে। প্রয়োজন হলে scrollbar দেখা যাবে।
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

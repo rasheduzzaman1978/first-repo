@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="image/Rashed.png" type="image/x-icon">
+  <link rel="stylesheet" href="practice2.css">
+  <title>Goyhatta Primary School</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #f8f8f8;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header .logo-area {
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+    nav {
+      background-color: #004080;
+      position: sticky;
+      top: 70px;
+      z-index: 999;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    h2 {
+      text-align: center;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 250px;
+      margin: 10px;
+      border: 1px solid #ccc;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .file-download a {
+      display: block;
+      margin: 5px 0;
+      color: blue;
+      text-decoration: underline;
+    }
+    .print-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 15px;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-area">
+    <img src="logo.png" alt="Logo">
+    <h1>Goyhatta Primary School</h1>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">বিদ্যালয়ের তথ্য</a></li>
+    <li><a href="#teachers">শিক্ষক তথ্য</a></li>
+    <li><a href="#students">শিক্ষার্থী তথ্য</a></li>
+    <li><a href="#results">ফলাফল</a></li>
+    <li><a href="#notices">নোটিশ বোর্ড</a></li>
+    <li><a href="#gallery">গ্যালারি</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <h2>বিদ্যালয়ের তথ্য</h2>
+  <p>গয়হাটা সরকারি প্রাথমিক বিদ্যালয় একটি ঐতিহ্যবাহী শিক্ষা প্রতিষ্ঠান।</p>
+</section>
+
+<section id="teachers">
+  <h2>শিক্ষক তথ্য</h2>
+  <div class="file-download">
+    <a href="files/teachers-info.docx" download>Download Teachers Info (Word)</a>
+  </div>
+</section>
+
+<section id="students">
+  <h2>শিক্ষার্থী তথ্য</h2>
+  <div class="file-download">
+    <a href="files/students-class1.xlsx" download>শ্রেণি ১ এর তালিকা (Excel)</a>
+    <a href="files/students-class2.xlsx" download>শ্রেণি ২ এর তালিকা (Excel)</a>
+    <a href="files/students-class3.xlsx" download>শ্রেণি ৩ এর তালিকা (Excel)</a>
+    <a href="files/students-class4.xlsx" download>শ্রেণি ৪ এর তালিকা (Excel)</a>
+    <a href="files/students-class5.xlsx" download>শ্রেণি ৫ এর তালিকা (Excel)</a>
+  </div>
+</section>
+
+<section id="results">
+  <h2>ফলাফল</h2>
+  <iframe src="files/exam-result.pdf" width="100%" height="500px"></iframe>
+  <br>
+  <button class="print-button" onclick="window.print()">ফলাফল প্রিন্ট করুন</button>
+</section>
+
+<section id="notices">
+  <h2>নোটিশ বোর্ড</h2>
+  <div class="file-download">
+    <a href="files/holiday-notice.pdf" download>ছুটির নোটিশ (PDF)</a>
+    <a href="files/exam-notice.pdf" download>পরীক্ষার নোটিশ (PDF)</a>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>গ্যালারি</h2>
+  <div class="gallery">
+    <img src="images/pic1.jpg" alt="ছবি ১">
+    <img src="images/pic2.jpg" alt="ছবি ২">
+    <img src="images/pic3.jpg" alt="ছবি ৩">
+  </div>
+</section>
+
+</body>
+</html>

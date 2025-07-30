@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox</title>
+  <style>
+    .container {
+      display: flex;
+      gap: 15px;
+      align-items: stretch;
+    }
+
+    .box1, .box2, .box3, .box4 {
+      flex: 1; /* সমান প্রস্থ */
+      min-height: 150px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      color: white;
+
+      /* টেক্সট ভাঙার জন্য */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .box1 {
+      background: teal;
+    }
+    .box2 {
+      background: rgb(134, 199, 14);
+    }
+    .box3 {
+      background: lightblue;
+      color: black;
+    }
+    .box4 {
+      background: brown;
+    }
+
+    /* Hover effect */
+    .box1:hover, .box2:hover, .box3:hover, .box4:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box1">
+      <h2>অনেক বড় লেখা এখা ভালোভাবে কাজ করার জন্য এই বাক্সে রাখা হয়েছে যাতে word-break ঠিকমতো কাজ করে এবং বাক্স সমান আকারে থাকে।</h2>
+    </div>
+    <div class="box2">
+      <h2>এই বাক্সেও অনেক বড় বড় বাক্য রাখা হয়েছে যাতে দেখা যায় সবগুলো বক্সের প্রস্থ সমানভাবে থাকে।</h2>
+    </div>
+    <div class="box3">
+      <h2>এই বাক্সও পাশে থাকবে এবং বাক্সের আকার সমান থাকবে।</h2>
+    </div>
+    <div class="box4">
+      <h2>এই বাক্সও একই আকারে থাকবে অন্যদের মতো।</h2>
+    </div>
+  </div>
+
+</body>
+</html>

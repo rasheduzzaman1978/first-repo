@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="image/Rashed.png" type="image/x-icon">
+  <link rel="stylesheet" href="practice2.css">
+  <title>Goyhatta Primary School</title>
+  <style>
+    :root {
+      --bg-color: #fff;
+      --text-color: #000;
+      --header-bg: #003366;
+      --footer-bg: #003366;
+    }
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --header-bg: #1f1f1f;
+      --footer-bg: #1f1f1f;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .search-box {
+      margin-top: 10px;
+    }
+    .search-box input {
+      padding: 6px;
+      border-radius: 4px;
+      border: none;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 12px;
+      background: #ccc;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .hero {
+      background: linear-gradient(to right, #e0f7fa, #fff);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+    .content, .sidebar, .extra {
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+    }
+    .gallery-img {
+      width: 100%;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+    .tooltip {
+      position: relative;
+      cursor: help;
+      color: darkblue;
+      font-weight: bold;
+    }
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      background: #222;
+      color: #fff;
+      padding: 6px;
+      font-size: 12px;
+      border-radius: 4px;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .tooltip:hover::after {
+      opacity: 1;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 200;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      display: block;
+      margin: auto;
+      max-width: 80%;
+      border-radius: 10px;
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .contact-form {
+      padding: 20px;
+      background: #f2f2f2;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 30px auto;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      background: #003366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .notice-board {
+      background: #fffae6;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .teacher-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .teacher-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .teacher-gallery img:hover {
+      transform: scale(1.1);
+    }
+    footer {
+      background-color: var(--footer-bg);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleMode()">🌓</button>
+
+  <header>
+    <h1>Goyhatta Govt. Primary School</h1>
+    <nav>
+      <a href="#">হোম</a>
+      <a href="#">পরিচিতি</a>
+      <a href="#">শিক্ষকবৃন্দ</a>
+      <a href="#">যোগাযোগ</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" placeholder="অনুসন্ধান করুন...">
+    </div>
+  </header>
+
+  <div class="notice-board">📢 আগামীকাল ৫ই আগস্ট, ২০২৫ খ্রিষ্টাব্দ স্কুল ছুটি ঘোষণা করা হলো।</div>
+
+  <section class="hero">
+    <h2>স্বাগতম!</h2>
+    <p>আমাদের স্কুলে আপনাকে স্বাগতম। এখান থেকে আমাদের শিক্ষার যাত্রা শুরু হয়।</p>
+  </section>
+
+  <main class="container">
+    <section class="content">
+      <h2>স্কুলের ইতিহাস</h2>
+      <p>গয়হাট্টা সরকারি প্রাথমিক বিদ্যালয় ১৯২৯ সালে প্রতিষ্ঠিত। দীর্ঘদিন ধরে এই স্কুল স্থানীয় শিক্ষার মূল কেন্দ্র হিসেবে কাজ করছে।</p>
+    </section>
+
+    <aside class="sidebar">
+      <h2>ছবি গ্যালারি</h2>
+      <img src="school1.jpg" alt="School Image" class="gallery-img" onclick="openModal(this)">
+      <img src="school2.jpg" alt="Classroom Image" class="gallery-img" onclick="openModal(this)">
+    </aside>
+
+    <section class="extra">
+      <h2>বিশেষ তথ্য</h2>
+      <ul>
+        <li><span class="tooltip" data-tooltip="সকাল ৯টা- বিকাল ৪টা">স্কুল সময়সূচি</span></li>
+        <li><span class="tooltip" data-tooltip="২৯ জন শিক্ষক">শিক্ষক সংখ্যা</span></li>
+        <li><span class="tooltip" data-tooltip="৪৫০ জন শিক্ষার্থী">শিক্ষার্থী সংখ্যা</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <section class="teacher-gallery">
+    <img src="teacher1.jpg" alt="Teacher 1">
+    <img src="teacher2.jpg" alt="Teacher 2">
+    <img src="teacher3.jpg" alt="Teacher 3">
+  </section>
+
+  <section class="contact-form">
+    <h2>যোগাযোগ করুন</h2>
+    <form>
+      <input type="text" placeholder="আপনার নাম" required>
+      <input type="email" placeholder="আপনার ইমেইল" required>
+      <textarea rows="5" placeholder="আপনার বার্তা"></textarea>
+      <button type="submit">প্রেরণ করুন</button>
+    </form>
+  </section>
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Goyhatta Govt. Primary School. সর্বস্বত্ব সংরক্ষিত।</p>
+  </footer>
+
+  <script>
+    function openModal(img) {
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("modal-img").src = img.src;
+    }
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>

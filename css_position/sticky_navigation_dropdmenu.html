@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Goyhatta Government Primary School</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* 🏫 Header/Navbar */
+    header {
+  position: sticky;
+  top: 0;
+  background-color: #003366;
+  color: white;
+  padding: 5px;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column; /* h1 ও nav নিচে নিচে থাকবে */
+  align-items: center;     /* সবকিছু horizontally center */
+  text-align: center;      /* h1 এর টেক্সট centering */
+  font-size: 14px;
+}
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu > li {
+      list-style: none;
+      position: relative;
+    }
+
+    .menu > li > a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .menu > li > a:hover {
+      background-color: #1abc9c;
+    }
+
+    /* 🔽 Dropdown menu */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #34495e;
+      min-width: 160px;
+      z-index: 999;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #1abc9c;
+    }
+
+    .menu li:hover .dropdown {
+      display: block;
+    }
+
+    /* 🔻 Sections */
+    section {
+      padding: 60px 20px;
+      height: 100vh;
+    }
+
+    #home { background: #f1c40f; }
+    #about { background: #e67e22; }
+    #services { background: #9b59b6; color: white; }
+    #contact { background: #3498db; color: white; }
+   #address{ background: #d682a5; color: white; }
+#phone{ background: #afbbe6; color: white; }
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 Sticky Navbar -->
+   <header>
+  <nav class="navbar">
+    <h2>🏫 Goyhatta Government Primary School</h2>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li>
+        <a href="#about">About ⏷</a>
+        <div class="dropdown">
+          <a href="#mission">Our Mission</a>
+          <a href="#vision">Our Vision</a>
+          <a href="#team">Our Team</a>
+        </div>
+      </li>
+      <li><a href="#services">Services</a></li>
+      <li>
+        <a href="#contact">Contact ⏷</a>
+        <div class="dropdown">
+          <a href="#address">Address</a>
+          <a href="#email">Email</a>
+          <a href="#phone">Phone</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+  <!-- 🎯 Page Sections -->
+  <section id="home">
+    <h1>🏠 Home</h1>
+    <p>এখানে হোম কনটেন্ট থাকবে।</p>
+  </section>
+
+  <section id="about">
+    <h1>ℹ️ About</h1>
+    <p>আমাদের সম্পর্কে তথ্য।</p>
+  </section>
+
+  <section id="mission">
+    <h1>🎯 Our Mission</h1>
+    <p>বিদ্যালয়ের লক্ষ্য ও উদ্দেশ্য।</p>
+  </section>
+
+  <section id="vision">
+    <h1>🔭 Our Vision</h1>
+    <p>আমাদের ভবিষ্যৎ পরিকল্পনা।</p>
+  </section>
+
+  <section id="team">
+    <h1>👨‍🏫 Our Team</h1>
+    <p>শিক্ষক ও কর্মীদের তথ্য।</p>
+  </section>
+
+  <section id="services">
+    <h1>💼 Services</h1>
+    <p>আমাদের প্রদানকৃত পরিষেবাসমূহ।</p>
+  </section>
+
+  <section id="contact">
+    <h1>📞 Contact</h1>
+    <p>যোগাযোগ করতে নিচের তথ্য দেখুন।</p>
+  </section>
+
+  <section id="address">
+    <h1>🏠 School Address</h1>
+    <p>গয়হাট্টা, উল্লাপাড়া, সিরাজগঞ্জ, বাংলাদেশ</p>
+  </section>
+
+  <section id="email">
+    <h1>📧 Email</h1>
+<p>ggps1929@gmail.com</p>
+  </section>
+
+  <section id="phone">
+    <h1>📱 Phone</h1>
+    <p>+880 1716651946</p>
+  </section>
+
+</body>
+</html>

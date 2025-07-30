@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>সমন্বিত শেডিউল ব্যবস্থাপনা</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+ <style>
+ body {
+  font-family: 'Noto Sans Bengali', sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header {
+  background: #24c7c7;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.title h2 {
+  margin: 0;
+  font-size: 22px;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+.title p {
+  margin: 0;
+  font-size: 16px;
+ text-shadow: 0 0 3px #FF0000;
+}
+
+.main-box {
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.left-img img {
+  width: 220px;
+}
+
+.login-box {
+  width: 350px;
+  background: #e0f7f7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.login-box h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 90%;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #333;
+}
+
+.login-btn {
+  width: 105%;
+  padding: 10px;
+  background: #14b8b8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #0d8b8b;
+}
+
+.forgot {
+  margin-top: 10px;
+  text-align: right;
+  }
+
+.forgot a {
+  color: #0077cc;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.left-text {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.right-text {
+  margin-top: 10px;
+  text-align: right;
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <img src="image/gob_logo.png" class="logo" alt="logo">
+      <div class="title">
+        <h2>সমন্বিত গ্রেডেশন ব্যবস্থাপনা</h2>
+        <p>প্রাথমিক শিক্ষা অধিদপ্তর</p>
+      </div>
+    </header>
+
+    <main class="main-box">
+      <div class="left-img">
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/enter-password-4482642-3722039.png" alt="login-illustration">
+      </div>
+
+      <div class="login-box">
+        <h3>ল গ ই ন</h3>
+        <form>
+          <div class="form-group">
+            <input type="text" placeholder="ইউজার আইডি (ইংরেজিতে)...">
+            <span class="icon">❔</span>
+          </div>
+
+          <div class="form-group">
+            <input type="password" placeholder="পাসওয়ার্ড .." id="password">
+            <span class="icon toggle-password">👁️</span>
+          </div>
+
+          <button type="submit" class="login-btn">🔐 লগইন</button>
+          <p class="forgot"><a href="#">পাসওয়ার্ড ভুলে গেছেন?</a></p>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="left-text">পরিকল্পনায়: প্রাথমিক শিক্ষা অধিদপ্তর</div>
+  <div class="right-text">উন্নয়নে: মোঃ শরিফ উল ইসলাম, শিক্ষা অফিসার, প্রাশিশি</div>
+    </footer>
+  </div>
+
+  <script>
+    // Password show/hide toggle
+    const togglePassword = document.querySelector('.toggle-password');
+    const passwordInput = document.getElementById('password');
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.type === 'password' ? 'text' : 'password';
+      passwordInput.type = type;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox + Dark Mode + Icons</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box1, .box2 {
+      flex: 1 1 45%;
+      min-height: 150px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      word-wrap: break-word;
+      color: white;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .box1 {
+      background-color: orange;
+    }
+
+    .box2 {
+      background-color: teal;
+    }
+
+    .box1:hover, .box2:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .dark-mode {
+      background-color: #1e1e1e;
+      color: #eee;
+    }
+
+    .dark-mode .box1 {
+      background-color: #cc8400;
+    }
+
+    .dark-mode .box2 {
+      background-color: #007c7c;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header i {
+      font-size: 30px;
+      color: #ff6600;
+      margin-right: 10px;
+    }
+
+    .toggle-btn {
+      display: block;
+      margin: 0 auto 30px auto;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+.box1 h3, .box2 h3 {
+color: brown;
+}
+
+    .toggle-btn:hover {
+      background-color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .box1, .box2 {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+
+  <!-- Icon support (Font Awesome) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="header">
+    <h2><i class="fas fa-cubes"></i>ফ্লেক্সবক্স + ডার্ক মোড ডিজাইন</h2>
+  </div>
+
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌙 ডার্ক মোড চালু/বন্ধ করুন</button>
+
+  <div class="container">
+    <div class="box1">
+      <h3>রিদওয়ান সাজিদ</h3>
+      <p>সাজিদ ১০ম শ্রেণির একজন ছাত্র। তার স্কুলের নাম মোমেনা আলী বিজ্ঞান স্কুল। সে প্রতিদিন বাড়ি থেকে স্কুলে যায়। </p>
+    </div>
+
+    <div class="box2">
+      <h3>সিফাত আব্দুল্লাহ</h3>
+      <p>
+        সিফাত ৫ম শ্রেণির একজন ছাত্র। তার স্কুলের নাম গয়হাট্টা সরকারি প্রাথমিক বিদ্যালয়।
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>

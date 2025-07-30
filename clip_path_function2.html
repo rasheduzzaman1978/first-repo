@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clip-path Shapes</title>
+  <style>
+    body {
+      background: #222;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .shape {
+      width: 200px;
+      height: 200px;
+      background-color: tomato;
+      transition: 0.3s;
+    }
+
+    .shape:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px white;
+    }
+
+    .triangle {
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+
+    .hexagon {
+      background-color: orange;
+      clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    }
+
+    .circle {
+      background-color: limegreen;
+      clip-path: circle(50% at 50% 50%);
+    }
+
+    .star {
+      background-color: gold;
+      clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%,
+        79% 91%, 50% 70%, 21% 91%, 32% 57%,
+        2% 35%, 39% 35%
+      );
+    }
+
+    .rectangle {
+      width: 300px;
+      height: 150px;
+      background-color: royalblue;
+      clip-path: inset(0);
+    }
+
+    .square {
+      background-color: deeppink;
+      clip-path: inset(0);
+    }
+
+    .diamond {
+      background-color: cyan;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="shape triangle"></div>
+  <div class="shape hexagon"></div>
+  <div class="shape circle"></div>
+  <div class="shape star"></div>
+  <div class="shape rectangle"></div>
+  <div class="shape square"></div>
+  <div class="shape diamond"></div> <!-- ✅ নতুন Diamond -->
+
+</body>
+</html>

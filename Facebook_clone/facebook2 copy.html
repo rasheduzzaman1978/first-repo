@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facebook – log in or sign up</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: #1c1e21;
+      background: #f0f2f5;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .container {
+      max-width: 980px;
+      padding: 20px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      min-height: 100vh;
+    }
+    .left {
+      flex-basis: 50%;
+      padding: 20px;
+    }
+    .left h1 {
+      color: #1877f2;
+      font-size: 56px;
+      margin-bottom: 20px;
+    }
+    .left p {
+      font-size: 24px;
+      color: #1c1e21;
+      line-height: 1.4;
+    }
+    .right {
+      flex-basis: 40%;
+      padding: 20px;
+    }
+    .login-form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .login-form input {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 17px;
+    }
+    .login-btn {
+      background: #1877f2;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .forgot {
+      display: block;
+      color: #1877f2;
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 15px;
+    }
+    .forgot:hover {
+      text-decoration: underline;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 20px 0;
+    }
+    .create-btn {
+      background: #36a420;
+      color: #fff;
+      font-size: 17px;
+      font-weight: bold;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .create-page {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    .create-page a {
+      font-weight: bold;
+      color: #1c1e21;
+      text-decoration: none;
+    }
+    .create-page a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer Area */
+    #footer_area {
+      background: #fff;
+      padding: 25px 0;
+    }
+    #footer_area ul {
+      text-align: left;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #footer_area ul li {
+      margin: 5px 10px;
+    }
+    #footer_area ul li a {
+      color: #737373;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    #footer_area ul li a:hover {
+      text-decoration: underline;
+    }
+    #footer_area p {
+      color: #737373;
+      font-size: 12px;
+      text-align: left;
+      padding: 0 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .left, .right {
+        flex-basis: 100%;
+      }
+      .left h1 {
+        font-size: 42px;
+      }
+      .left p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <h1>facebook</h1>
+      <p>Facebook helps you connect and share with the people in your life.</p>
+    </div>
+    <div class="right">
+      <form class="login-form">
+        <input type="text" placeholder="Email address or phone number" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit" class="login-btn">Log In</button>
+        <a href="#" class="forgot">Forgotten password?</a>
+        <hr />
+        <button type="button" class="create-btn">Create New Account</button>
+      </form>
+      <p class="create-page">
+        <a href="#">Create a Page</a> for a celebrity, brand or business.
+      </p>
+    </div>
+  </div>
+
+  <footer id="footer_area">
+    <div class="container">
+      <ul>
+        <li><a href="#">English (UK)</a></li>
+        <li><a href="#">বাংলা</a></li>
+        <li><a href="#">অসমীয়া</a></li>
+        <li><a href="#">हिन्दी</a></li>
+        <li><a href="#">नेपाली</a></li>
+        <li><a href="#">Bahasa Indonesia</a></li>
+        <li><a href="#">العربية</a></li>
+        <li><a href="#">中文(简体)</a></li>
+        <li><a href="#">Bahasa Melayu</a></li>
+        <li><a href="#">Español</a></li>
+        <li><a href="#">Português (Brasil)</a></li>
+      </ul>
+      <p>Meta © 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>

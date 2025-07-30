@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Goyhatta Govt. Primary School</title>
+  <style>
+    /* Global Styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Sticky Navbar */
+    header {
+  position: sticky;
+  top: 0;
+  background-color: #003366;
+  color: white;
+  padding: 15px;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column; /* h1 ও nav নিচে নিচে থাকবে */
+  align-items: center;     /* সবকিছু horizontally center */
+  text-align: center;      /* h1 এর টেক্সট centering */
+  font-size: 10px;
+}
+
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      display: block;
+    }
+
+    /* Dropdown Menu */
+    nav li ul {
+      display: none;
+      position: absolute;
+      background-color: #336699;
+      padding: 10px;
+    }
+
+    nav li:hover ul {
+      display: block;
+    }
+
+    nav li ul li {
+      width: 150px;
+    }
+
+    /* Section Styling using Combinators */
+
+    /* Descendant: Section এর ভেতরে p */
+    section p {
+      color: #333;
+    }
+
+    /* Child: Main section এর সরাসরি h2 */
+    main > section > h2 {
+      color: #003366;
+      border-bottom: 2px solid #003366;
+    }
+
+    /* Adjacent Sibling: h2 এর ঠিক পরের p */
+    h2 + p {
+      font-style: italic;
+    }
+
+    /* General Sibling: h3 এর পরে আসা সব p */
+    h3 ~ p {
+      background-color: #f0f8ff;
+      padding: 5px;
+    }
+
+    section {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <h1>🏫 Goyhatta Government Primary School</h1>
+    <nav>
+     
+       <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li>
+        <a href="#about">About ⏷</a>
+        <div class="dropdown">
+          <a href="#mission">Our Mission</a>
+          <a href="#vision">Our Vision</a>
+          <a href="#team">Our Team</a>
+        </div>
+      </li>
+      <li><a href="#services">Services</a></li>
+      <li>
+        <a href="#contact">Contact ⏷</a>
+        <div class="dropdown">
+          <a href="#address">Address</a>
+          <a href="#email">Email</a>
+          <a href="#phone">Phone</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h2>About Us</h2>
+      <p>Welcome to our school! We provide quality education with dedication.</p>
+      <p>Our students learn in a joyful and creative environment.</p>
+    </section>
+
+    <section>
+      <h2>Our Mission</h2>
+      <p>To educate every child with care and values.</p>
+      <h3>Focus Areas</h3>
+      <p>Discipline, Creativity, and Honesty</p>
+      <p>Community and Collaboration</p>
+    </section>
+  </main>
+
+</body>
+</html>

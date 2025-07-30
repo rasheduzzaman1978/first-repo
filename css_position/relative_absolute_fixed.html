@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Position Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 20px;
+      background-color: #2980b9;
+      color: white;
+    }
+
+    /* 🔵 Relative Box */
+    .relative-box {
+      position: relative;
+      width: 500px;
+      height: 250px;
+      margin: 40px auto;
+      border: 3px dashed #2ecc71;
+      background-color: #ecf0f1;
+      padding: 20px;
+    }
+
+    .relative-box::before {
+      content: "Parent: position: relative";
+      font-weight: bold;
+      color: #2ecc71;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* 🔴 Absolute Box */
+    .absolute-box {
+      position: absolute;
+      top: 100px;
+      right: 20px;
+      width: 200px;
+      height: 100px;
+      background-color: #e74c3c;
+      color: white;
+      padding: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .absolute-box::before {
+      content: "Child: position: absolute";
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* 🟣 Fixed Box */
+    .fixed-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #9b59b6;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      font-weight: bold;
+      z-index: 999;
+    }
+
+    /* Extra spacing for scroll effect */
+    .spacer {
+      height: 1000px;
+      background: linear-gradient(to bottom, #ffffff, #bdc3c7);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>CSS Position: relative vs absolute vs fixed</h2>
+
+  <!-- 🔵 Relative Parent -->
+  <div class="relative-box">
+    এই বক্সটি `position: relative`, এর child হচ্ছে:
+    <!-- 🔴 Absolute Child -->
+    <div class="absolute-box">
+      এই বক্সটি `position: absolute`<br>
+      এটি parent এর ভেতরে top/right অনুযায়ী বসানো হয়েছে।
+    </div>
+  </div>
+
+  <!-- Scroll content -->
+  <div class="spacer"></div>
+
+  <!-- 🟣 Fixed Box -->
+  <div class="fixed-box">
+    🔝 Fixed Box (সবসময় নিচে ডান পাশে থাকবে)
+  </div>
+
+</body>
+</html>

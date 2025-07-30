@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Position Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* 🔝 Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #2c3e50;
+      padding: 15px 20px;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      z-index: 999;
+    }
+
+    /* ✅ Tooltip Effect */
+    .tooltip {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: black;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-size: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover::after {
+      opacity: 1;
+    }
+
+    /* 🟦 Relative Container */
+    .relative-box {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      height: 250px;
+      margin: 50px auto;
+      border: 3px dashed #2ecc71;
+      background-color: #ecf0f1;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .relative-box:hover {
+      transform: scale(1.02);
+    }
+
+    .relative-box::before {
+      content: "Parent: position: relative";
+      font-weight: bold;
+      color: #2ecc71;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* 🔴 Absolute Box with Hover Animation */
+    .absolute-box {
+      position: absolute;
+      top: 100px;
+      right: 20px;
+      width: 200px;
+      height: 100px;
+      background-color: #e74c3c;
+      color: white;
+      padding: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .absolute-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .absolute-box::before {
+      content: "Child: absolute";
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* 🟣 Fixed Button */
+    .fixed-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #9b59b6;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      z-index: 1000;
+    }
+
+    .fixed-box:hover {
+      background-color: #8e44ad;
+    }
+
+    /* 🧱 Scroll Sections */
+    section {
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    #section1 { background: #f1c40f; }
+    #section2 { background: #e67e22; }
+    #section3 { background: #3498db; color: white; }
+
+    /* 📱 Responsive */
+    @media (max-width: 600px) {
+      .absolute-box {
+        width: 160px;
+        font-size: 14px;
+      }
+
+      .fixed-box {
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 Sticky Header -->
+  <header>
+    🏫 Goyhatta Government Primary School - Position Demo
+  </header>
+
+  <!-- 📄 Section 1 -->
+  <section id="section1">
+    <div class="relative-box tooltip" data-tooltip="This is the parent box">
+      এটি একটি Relative Box (Parent)
+      <div class="absolute-box tooltip" data-tooltip="I'm absolutely positioned">
+        এটি Absolute Box (Child)
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button class="tooltip" data-tooltip="Go to Section 2" onclick="scrollToSection('section2')">➡️ পরবর্তী সেকশন</button>
+    </div>
+  </section>
+
+  <!-- 📄 Section 2 -->
+  <section id="section2">
+    <h2>📦 Hover Animation Section</h2>
+    <p style="text-align:center">এই অংশে আপনি hover করলে বক্স একটু উপরে উঠবে।</p>
+    <div style="text-align: center; margin-top: 20px;">
+      <button class="tooltip" data-tooltip="Go to Section 3" onclick="scrollToSection('section3')">➡️ পরবর্তী সেকশন</button>
+    </div>
+  </section>
+
+  <!-- 📄 Section 3 -->
+  <section id="section3">
+    <h2 style="text-align: center;">🎯 Scroll Complete!</h2>
+    <p style="text-align: center;">আপনি সফলভাবে নিচের সেকশনে পৌঁছেছেন।</p>
+  </section>
+
+  <!-- 🟣 Fixed Scroll-to-Top Button -->
+  <div class="fixed-box tooltip" data-tooltip="Back to top" onclick="scrollToTop()">
+    ⬆️ Top
+  </div>
+
+  <!-- ✅ JavaScript -->
+  <script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  </script>
+
+</body>
+</html>

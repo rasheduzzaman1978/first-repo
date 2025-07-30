@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Navigation Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      scroll-behavior: smooth; /* Smooth Scroll */
+    }
+
+    /* 🔝 Sticky Navbar */
+    header {
+  position: sticky;
+  top: 0;
+  background-color: #003366;
+  color: white;
+  padding: 5px;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column; /* h1 ও nav নিচে নিচে থাকবে */
+  align-items: center;     /* সবকিছু horizontally center */
+  text-align: center;      /* h1 এর টেক্সট centering */
+  font-size: 14px;
+}
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #83bc1a;
+    }
+
+    /* 🧱 Section Style */
+    section {
+      padding: 30px 20px;
+      height: 100vh;
+    }
+
+    #home { background: #f1c40f; }
+    #about { background: #e67e22; }
+    #services { background: #9b59b6; color: white; }
+    #contact { background: #3498db; color: white; }
+
+    /* Optional: Active link highlight (manual or via JS later) */
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 Sticky Navigation Menu -->
+  <header>
+    <h2>🏫 গয়হাট্টা সরকারি প্রাথমিক বিদ্যালয়</h2>
+  <nav>
+    <a href="#home">হোম</a>
+    <a href="#about">সম্পর্ক</a>
+    <a href="#services">সেবাসমূহ</a>
+    <a href="#contact">যোগাযোগ</a>
+  </nav>
+  </header> 
+
+  <!-- 🎯 Page Sections -->
+  <section id="home">
+    <h3>🏠 হোম সেকশন</h3>
+    <p>এখানে হোম কনটেন্ট থাকবে।</p>
+  </section>
+
+  <section id="about">
+    <h1>ℹ️সম্পর্ক সেকশন</h1>
+    <p>এখানে আমাদের সম্পর্কে কনটেন্ট থাকবে।</p>
+  </section>
+
+  <section id="services">
+    <h1>💼 সার্ভিস সেকশন</h1>
+    <p>এখানে সার্ভিস সম্পর্কিত কনটেন্ট থাকবে।</p>
+  </section>
+
+  <section id="contact">
+    <h1>📞 যোগাযোগ সেকশন</h1>
+    <p>এখানে যোগাযোগ ফর্ম বা তথ্য থাকবে।</p>
+  </section>
+
+</body>
+</html>

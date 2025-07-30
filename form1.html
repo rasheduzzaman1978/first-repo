@@ -1,137 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up Form</title>
-  <link rel="stylesheet" href="/css/form.css">
+  <title>Practice Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 0 auto;
+      background-color: #e0f7fa;
       padding: 20px;
     }
-    form {
-      margin-top: 20px;
+
+    h3 {
+      text-align: center;
+      color: #333;
     }
+
+    div {
+      max-width: 500px;
+      margin: auto;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: block;
+    }
+
     label {
-      display: inline-block;
-      width: 150px;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type=text],
+    input[type=tel],
+    input[type=email],
+    input[type=password],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .gender-options {
       margin-bottom: 10px;
     }
-    input, select, textarea {
-      margin-bottom: 15px;
+     input[type=date],
+    input[type=number] {
       padding: 5px;
+      margin-bottom: 10px;
+      width: 100%;
     }
-    .radio-group, .checkbox-group {
-      margin-bottom: 15px;
+
+    .gender-options input[type=radio] {
+      margin-right: 5px;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
-<body>
-  <h2 style="text-align: center;">Technology Preferences</h2>
-  <form action="" class="tech-form">
-    <div class="radio-group">
-      <input type="radio" name="tech" id="html" value="html">
-      <label for="html">HTML</label>
-      
-      <input type="radio" name="tech" id="python" value="python">
-      <label for="python">Python</label>
-    </div>
-    <div class="checkbox-group">
-      <input type="checkbox" name="tech" id="css" value="css">
-      <label for="css">CSS</label>
-    </div>
-  </form>
 
-  <h2 style="text-align: center;">Sign up Form</h2>
-  <hr>
-  
-  <form action="#" method="post">
-    <div>
-      <label for="user">Name: </label>
-      <input type="text" name="user" id="user" placeholder="User name" required>
-    </div>
-    
-    <div>
-      <label for="email">E-mail: </label>
-      <input type="email" name="usermail" id="email" placeholder="User Mail" required>
-    </div>
-    
-    <div>
-      <label for="password">Password: </label>
-      <input type="password" name="password" id="password" placeholder="Password" required>
-    </div>
-    
-    <div>
-      <label for="phone">Phone Number: </label>
-      <select name="code" id="country-code">
-        <option value="+880">+880</option>
-        <option value="+990">+990</option>
-        <option value="+110">+110</option>
+<body>
+  <h3>Using CSS to Style an HTML Form</h3>
+  <div>
+    <form action="#">
+      <label for="fname">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+
+      <label for="brn">Bith Registration number:</label>
+      <input type="number" id="brn" name="brn" placeholder="Your birth registration number..">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" placeholder="Your date of birth..">
+      <label for="fname">Father's Name:</label>
+      <input type="text" id="fname" name="fathername" placeholder="Your father's name..">
+      <label for="mname">Mother's Name:</label>
+      <input type="text" id="mname" name="mothername" placeholder="Your mother's name..">
+
+      <label>Birth Registration & DoB:</label>
+      <div class="birt-options">
+        <label for="brn" style="display: inline;">BRN</label>
+        <input type="number" id="brn" name="brn" placeholder="Birth registration number.."">
+        
+      <label for="dob" style="display: inline;">DoB</label>
+        <input type="date" id="dob" name="dob" placeholder="Date of birth..">
+        </div>
+
+      <label>Gender (Select anyone):</label>
+      <div class="gender-options">
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male" style="display: inline;">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female" style="display: inline;">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other" style="display: inline;">Other</label>
+      </div>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Phone number.." required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Your email..">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Your password..">
+      
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="BG">Bangladesh</option>
+        <option value="PK">Pakistan</option>
+        <option value="IN">India</option>
       </select>
-      <input type="tel" name="phone" id="phone" placeholder="123456789" required>
-    </div>
-    
-    <div>
-      <label for="country">Country: </label>
-      <input list="countries" name="country" id="country">
-      <datalist id="countries">
-        <option value="Bangladesh">
-        <option value="Pakistan">
-        <option value="Malaysia">
-        <option value="America">
-      </datalist>
-    </div>
-    
-    <div class="radio-group">
-      <label>Gender: </label>
-      <input type="radio" name="gender" id="male" value="male">
-      <label for="male">Male</label>
-      
-      <input type="radio" name="gender" id="female" value="female">
-      <label for="female">Female</label>
-    </div>
-    
-    <div>
-      <label for="dob">Date of Birth: </label>
-      <input type="date" name="dob" id="dob" required>  
-    </div>
-    
-    <div>
-      <label for="time">Time: </label>
-      <input type="time" name="time" id="time">
-    </div>
-    
-    <div>
-      <label for="color">Favorite Color: </label>
-      <input type="color" name="color" id="color">
-    </div>
-    
-    <div>
-      <label for="photo">Choose your photo: </label>
-      <input type="file" name="photo" id="photo" accept="image/*">
-    </div>
-    
-    <div class="checkbox-group">
-      <label>Vehicles: </label>
-      <input type="checkbox" name="vehicles" id="bike" value="bike">
-      <label for="bike">I have a bike</label>
-      
-      <input type="checkbox" name="vehicles" id="car" value="car">
-      <label for="car">I have a car</label>
-    </div>
-    
-    <div>
-      <label for="comments">Comments: </label>
-      <textarea name="comments" id="comments" rows="4" cols="40"></textarea>
-    </div>
-    
-    <div style="text-align: center; margin-top: 20px;">
+
       <input type="submit" value="Submit">
-      <input type="reset" value="Reset" style="margin-left: 10px;">
-    </div>
-  </form>
+    </form>
+  </div>
 </body>
+
 </html>

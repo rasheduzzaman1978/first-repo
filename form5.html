@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  
+}
+
+.profile-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 600px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #0077cc;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #000;
+}
+
+.profile-header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.form {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  flex: 100%;
+}
+
+label {
+  font-weight: 600;
+  color: #0077cc;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #0077cc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.required {
+  color: red;
+}
+</style>
+<body>
+  <div class="container">
+    <div class="profile-box">
+      <div class="profile-header">
+        <img src="https://i.ibb.co/1f0jY3Fd/Rashed.jpg" alt="Rashed" border="0"></a>
+        <div>
+          <h2>User Profile</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+        </div>
+      </div>
+
+      <form class="form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" value="xyz">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" value="abc">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Mobile</label>
+            <input type="text" value="9876543210">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" value="xyz@gmail.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Address Line 1</label>
+            <input type="text" value="9876543210">
+          </div>
+          <div class="form-group">
+            <label>Address Line 2</label>
+            <input type="text" value="87 2">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Society/Area/Sector</label>
+            <input type="text" value="Babarpur">
+          </div>
+          <div class="form-group">
+            <label>Pincode</label>
+            <input type="text" value="000000">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>City <span class="required">*</span></label>
+            <input type="text" value="Delhi">
+          </div>
+          <div class="form-group">
+            <label>District</label>
+            <input type="text" value="Delhi">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group full-width">
+            <label>State</label>
+            <input type="text" value="Delhi">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
+  

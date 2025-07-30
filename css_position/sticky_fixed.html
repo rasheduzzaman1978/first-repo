@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Header & Fixed Button</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 🔝 Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #3498db;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      z-index: 1000;
+    }
+
+    /* 🔘 Fixed Button */
+    .fixed-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #e74c3c;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    /* কিছু Scrollable Content */
+    .content {
+      padding: 20px;
+    }
+
+    .box {
+      height: 300px;
+      margin-bottom: 20px;
+      background-color: #ecf0f1;
+      border: 1px solid #ccc;
+      padding: 20px;
+      font-size: 18px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    📌 আমি একটি Sticky Header
+  </header>
+
+  <div class="content">
+    <div class="box">📦 Content Block 1</div>
+    <div class="box">📦 Content Block 2</div>
+    <div class="box">📦 Content Block 3</div>
+    <div class="box">📦 Content Block 4</div>
+    <div class="box">📦 Content Block 5</div>
+  </div>
+
+  <button class="fixed-button" onclick="scrollToTop()">
+    ⬆️ Top
+  </button>
+
+  <script>
+    // Button ক্লিক করলে পেজের উপরে নিয়ে যাবে
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Navbar + ScrollSpy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* 🔝 Sticky Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #2c3e50;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .school-name {
+      color: white;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu > li {
+      list-style: none;
+      position: relative;
+    }
+
+    .menu > li > a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .menu > li > a:hover,
+    .menu > li > a.active {
+      background-color: #1abc9c;
+    }
+
+    /* 🔽 Dropdown menu */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #34495e;
+      min-width: 160px;
+      z-index: 999;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #1abc9c;
+    }
+
+    .menu li:hover .dropdown {
+      display: block;
+    }
+
+    /* 📄 Sections */
+    section {
+      padding: 90px 20px;
+      height: 100vh;
+    }
+
+    #home { background: #f1c40f; }
+    #about { background: #e67e22; }
+    #services { background: #9b59b6; color: white; }
+    #contact { background: #3498db; color: white; }
+
+    #mission { background: #f39c12; }
+    #vision { background: #e74c3c; color: white; }
+    #team { background: #1abc9c; color: white; }
+    #address, #email, #phone {
+      background: #ecf0f1;
+    }
+
+    /* 🔝 Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 16px;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 Sticky Navbar -->
+  <nav class="navbar">
+    <div class="school-name">🏫 Goyhatta Government Primary School</div>
+    <ul class="menu" id="navbarMenu">
+      <li><a href="#home">Home</a></li>
+      <li>
+        <a href="#about">About ⏷</a>
+        <div class="dropdown">
+          <a href="#mission">Our Mission</a>
+          <a href="#vision">Our Vision</a>
+          <a href="#team">Our Team</a>
+        </div>
+      </li>
+      <li><a href="#services">Services</a></li>
+      <li>
+        <a href="#contact">Contact ⏷</a>
+        <div class="dropdown">
+          <a href="#address">Address</a>
+          <a href="#email">Email</a>
+          <a href="#phone">Phone</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 📄 Page Sections -->
+  <section id="home"><h1>🏠 Home</h1></section>
+  <section id="about"><h1>ℹ️ About</h1></section>
+  <section id="mission"><h1>🎯 Mission</h1></section>
+  <section id="vision"><h1>🔭 Vision</h1></section>
+  <section id="team"><h1>👨‍🏫 Team</h1></section>
+  <section id="services"><h1>💼 Services</h1></section>
+  <section id="contact"><h1>📞 Contact</h1></section>
+  <section id="address"><h1>🏫 Address</h1></section>
+  <section id="email"><h1>📧 Email</h1></section>
+  <section id="phone"><h1>📱 Phone</h1></section>
+
+  <!-- 🔝 Back to Top Button -->
+  <button id="backToTop" onclick="scrollToTop()">⬆️ Top</button>
+
+  <!-- ✅ JavaScript -->
+  <script>
+    // ScrollSpy: active menu highlight
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".menu > li > a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 80) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
+        }
+      });
+
+      // Show Back to Top button
+      const backToTop = document.getElementById("backToTop");
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+
+    // Scroll to Top button
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  </script>
+
+</body>
+</html>

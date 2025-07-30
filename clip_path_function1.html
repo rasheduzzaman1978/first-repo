@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clip Path Function</title>
+  <link rel="shortcut icon" href="image/Rashed.png" type="image/x-icon">
+  <link rel="stylesheet" href="practice2.css">
+ <head>
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+      background: #f4f4f4;
+    }
+
+    .shape {
+      width: 200px;
+      height: 200px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .shape:hover {
+      transform: scale(1.1);
+    }
+
+    .triangle {
+      background: teal;
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    }
+
+    .hexagon {
+      background: darkorange;
+      clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    }
+
+    .star {
+      background: gold;
+      clip-path: polygon(
+        50% 0%, 61% 35%,
+        98% 35%, 68% 57%,
+        79% 91%, 50% 70%,
+        21% 91%, 32% 57%,
+        2% 35%, 39% 35%
+      );
+    }
+
+    .circle {
+      background: crimson;
+      clip-path: circle(50% at 50% 50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="shape triangle"></div>
+  <div class="shape hexagon"></div>
+  <div class="shape star"></div>
+  <div class="shape circle"></div>
+
+</body>
+</html>

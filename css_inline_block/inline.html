@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Inline-block বক্স</title>
+  <!-- Font Awesome আইকনের জন্য CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .box {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+      padding: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      vertical-align: top;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      background-color: #45a049;
+    }
+
+    .box i {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .text {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <i class="fas fa-user"></i>
+    <div class="text">প্রোফাইল</div>
+  </div>
+
+  <div class="box">
+    <i class="fas fa-envelope"></i>
+    <div class="text">মেসেজ</div>
+  </div>
+
+  <div class="box">
+    <i class="fas fa-cog"></i>
+    <div class="text">সেটিংস</div>
+  </div>
+
+  <div class="box">
+    <i class="fas fa-sign-out-alt"></i>
+    <div class="text">লগআউট</div>
+  </div>
+
+</body>
+</html>

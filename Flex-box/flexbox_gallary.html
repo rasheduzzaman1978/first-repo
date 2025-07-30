@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Gallery</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      margin: 0;
+      padding: 20px;
+      background: #f2f2f2;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery {
+      border: 1px solid #ccc;
+      width: 200px;
+      background-color: white;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .gallery:hover {
+      border-color: #777;
+      transform: scale(1.03);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .desc {
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Flexbox Image Gallery</h2>
+
+<div class="gallery-container">
+  <div class="gallery">
+    <a target="_blank" href="image/Rashed.png">
+  <img src="image/Rashed.png" alt="Rashed Image" width="300" height="300">
+</a>
+  <div class="desc">Md. Rasheduzzaman<br>Assistant Teacher<br>Goyhatta GPS</div>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="image/image.png">
+      <img src="image/image.png" alt="Lotus" width="300" height="300">
+    </a>
+    <div class="desc">Lotus</div>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="image/large-image.jpg">
+  <img src="image/large-image.jpg" alt="Rashed Image" width="300" height="300">
+</a>
+    <div class="desc">City</div>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="image/image1.png">
+  <img src="image/image1.png" alt="Rashed Image" width="300" height="300">
+</a>
+    <div class="desc">Logo</div>
+  </div>
+</div>
+
+</body>
+</html>

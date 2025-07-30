@@ -1,0 +1,12 @@
+div{
+  background: lightsteelblue;
+  color: aqua;
+  padding: 20px 5%;
+  width: 90%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+img{
+  float: none;
+  display: block;
+}
